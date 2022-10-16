@@ -1,0 +1,115 @@
+.skills {
+	margin-top: 100px;
+	//color: $mainColor;
+	padding: 40px 0;
+	@media (max-width: $md3) {
+		padding: 20px 0;
+		margin-top: 70px;
+	}
+
+	&__container {
+		margin: 0 40px;
+		@media (max-width: $md3) {
+			margin: 0 20px;
+		}
+	}
+
+	&__item {
+		width: 50%;
+		padding: 30px 0;
+		@media (max-width: $md3) {
+			padding: 1px 0;
+		}
+	}
+	&__title {
+		margin-bottom: 30px;
+	}
+}
+
+.item-skills {
+	position: relative;
+	&::before {
+		content: '●';
+		position: absolute;
+		width: 1px;
+		height: 100%;
+		background-color: $greyColor;
+		color: $mainColor;
+		font-size: 28px;
+		line-height: 220%;
+		text-indent: -8px; //размер отступа (пустого места) перед строкой в текстовом блоке
+	}
+
+	&:nth-child(odd) { //нечетные элементы
+		text-align: right;
+		padding-right: 110px;
+		@media (max-width: $md4) {
+			padding-right: 20px;
+		}
+		.item-skills__img {
+			right: 20px;
+			@media (max-width: $md4) {
+				right: 0;
+			}
+		}
+		&::before {
+			right: 0;
+		}
+		p {
+			transform: translateX(20%);
+			@media (max-width: $md3) {
+				transform: translateX(0);
+			}
+		}
+	}
+
+	&:nth-child(even) { //четные элементы
+		padding-left: 110px;
+		margin: 0 0 0 50% ;
+		@media (max-width: $md4) {
+			padding-left: 20px;
+		}
+		.item-skills__img {
+			left: 20px;
+		}
+		&::before {
+			left: -1px;
+		}
+	}
+
+	&__img {
+		width: 74px;
+		height: 74px;
+		overflow: hidden;
+		border-radius: 100%;
+		border: 5px solid $greyColor;
+		position: absolute;
+		img {
+			width: 100%;
+		}
+		@media (max-width: $md4) {
+			display: none;
+		}
+	}
+
+	p {
+		line-height: 1.4;
+		margin: 4px 0 0 0;
+		font-size: 16px;
+		width: 80%;
+		@media (max-width: $md3) {
+			width: 100%;
+		}
+		@media (max-width: $md4) {
+			font-size: 14px;
+		}
+	}
+
+	span {
+		display: block;
+		font-size: 12px;
+		color: $mainColor;
+		font-weight: 700;
+		margin-top: 5px;
+	}
+}

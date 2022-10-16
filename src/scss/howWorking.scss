@@ -1,0 +1,98 @@
+.howWorking {
+	margin-top: 100px;
+	padding-bottom: 100px;
+	background: url("/img/howWorking/back.png") right 50%/ 70% no-repeat;
+	@media (max-width: $md2) {
+		margin-top: 0;
+		padding-bottom: 50px;
+	}
+	@media (max-width: $md3) {
+		padding-bottom: 30px;
+		background: url("/img/howWorking/back.png") right 80%/ 90% no-repeat;
+	}
+	@media (max-width: $md4) {
+		background: url("/img/howWorking/back.png") center center/ 150% no-repeat;
+	}
+
+	&__title {
+		text-align: left;
+		padding-top: 100px;
+		margin-bottom: 70px;
+		@media (max-width: $md3) {
+			padding-top: 80px;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+	}
+
+
+	&__item {
+		border: 1px solid #989EB1;
+		width: 455px;
+		border-radius: 22px;
+		padding: 30px 70px 30px 30px;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		position: relative;
+		letter-spacing: -0.03em;
+		color: #989EB1;
+		@media (max-width: $md3) {
+			width: 355px;
+		}
+		@media (max-width: $md4) {
+			width: 290px;
+		}
+	}
+
+	&__number {
+		position: absolute;
+		padding: 10px;
+		right: 0;
+		top: 0;
+		font-size: 20px;
+		opacity: 0.5;
+		line-height: 100%;
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 120%;
+		position: relative;
+		padding-top: 68px;
+		@media (max-width: $md3) {
+			font-size: 18px;
+		}
+	}
+}
+
+#arrow {
+	&::before {
+		content: url("/img/howWorking/arrow-right.svg");
+		width: 48px;
+		height: 48px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+#notes {
+	&::before {
+		content: url("/img/howWorking/clipboard-check.svg");
+		width: 48px;
+		height: 48px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+#check {
+	&::before {
+		content: url("/img/howWorking/check.svg");
+		width: 48px;
+		height: 48px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}

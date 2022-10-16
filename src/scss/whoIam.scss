@@ -1,0 +1,153 @@
+.whoIam {
+	margin-top: 100px;
+	@media (max-width: $md2) {
+		margin-top: 70px;
+	}
+	@media (max-width: $md3) {
+		margin-top: 40px;
+	}
+	&__container {
+		@media (min-width: $md1) {
+			background: url("/img/who/pins.png") 40% 30%/ 80% no-repeat;
+		}
+	}
+
+	&__title {
+	}
+
+	&__subtitle {
+		margin-top: 20px;
+	}
+
+	&__content {
+		margin-top: 70px;
+		display: flex;
+		align-items: center;
+		@media (max-width: $md2) {
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 0 20px;
+		}
+		@media (max-width: $md3) {
+			padding: 0 30px;
+			margin-top: 40px;
+		}
+		@media (max-width: $md4) {
+			justify-content: center;
+			padding: 0 0 0 0;
+			margin-top: 10px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		max-width: 354px;
+		&:nth-child(1) {
+			.whoIam__text {
+				transform: rotate(-12deg);
+				left: 50px;
+				top: 20%;
+				@media (max-width: $md2) {
+					top: 40%;
+				}
+			}
+			.whoIam__img {
+				padding-bottom: 320px;
+				@media (max-width: $md2) {
+					padding-bottom: 30px;
+				}
+			}
+			
+		}
+		&:nth-child(2) {
+			.whoIam__text {
+				width: 80%;
+				transform: rotate(17deg);
+				top: 55%;
+				left: 35px;
+				@media (max-width: $md2) {
+					top: 72%;
+				}
+			}
+			.whoIam__img {
+				padding-bottom: 150px;
+				@media (max-width: $md2) {
+					padding-bottom: 30px;
+				}
+			}
+		}
+		&:nth-child(3) {
+			.whoIam__text {
+				top: -60%;
+				@media (max-width: $md2) {
+					top: -20%; 
+				}
+				@media (max-width: $md4) {
+					top: 0; 
+				}
+			}
+			.whoIam__img {
+				padding-top: 50px;
+				@media (max-width: $md2) {
+					padding-top: 30px;
+				}
+				@media (max-width: $md4) {
+					padding-top: 50px; 
+				}
+			}
+		}
+		&:nth-child(4) {
+			.whoIam__text {
+				top: 30%;
+				@media (max-width: $md2) {
+					top: -30%;
+					text-align: center;
+				}
+				@media (max-width: $md4) {
+					top: 0;
+					text-align: left;
+				}		
+			}
+			.whoIam__img {
+				padding-bottom: 300px;
+				@media (max-width: $md2) {
+					padding-bottom: 0px;
+				}	
+				@media (max-width: $md4) {
+					padding-top: 50px; 
+				}
+			}
+		}
+	}
+
+	&__img {
+		padding: 20px;
+		max-width: 454px;
+		box-sizing: border-box;
+		img {
+			width: 100%;
+		}
+		@media (max-width: $md3) {
+			max-width: 254px;
+		}
+	}
+
+	&__text {
+		position: absolute;
+		top: 50%;
+		font-size: 24px;
+		line-height: 100%;
+		letter-spacing: -0.04em;
+		color: $mainColor;
+		z-index: 100;
+		span {
+			color: $greyColor;
+		}
+		@media (max-width: $md3) {
+			font-size: 16px;
+		}
+	}
+
+	
+}
+

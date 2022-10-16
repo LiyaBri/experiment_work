@@ -1,0 +1,64 @@
+.header {
+	//font-family: "Gilroy-SemiBold";
+	font-size: 16px;
+	letter-spacing: -0.03em;
+	font-weight: 400;
+	padding: 24px 0;
+	//position: relative;
+	/* &:after {
+		content: "";
+		position: absolute;
+		width: 100vw;
+		height: 1px;
+		background: #142251;
+		opacity: 0.2;
+		bottom: 0;
+	} */
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		font-family: 'Grape Nuts', cursive;
+		font-size: 1.5em;
+		transition: 0.1 all ease 0.6;
+		display: flex;
+		text-align: center;
+		align-items: center;
+		&:hover {
+			color: $greyColor;
+		}
+	}
+
+
+	&__items {
+		display: flex;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			padding-right: 32px;
+		}
+		a {
+			transition: 0.1 all ease 0.6;
+			&:hover {
+				color: $greyColor;
+			}
+		}
+	}
+
+	&__textsmile {
+		font-weight: 600;
+	}
+
+	&__imgsmile {
+		margin-right: 15px;
+		width: 30px;
+		height: 30px;
+		
+	}
+}
+
